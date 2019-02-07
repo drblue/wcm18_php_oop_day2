@@ -12,6 +12,7 @@ $horse->height = 170;
 $horse->weight = 600;
 $horse->sex = "Vallak";
 $horse->setOwner("Adam");
+$horse->setOwner("Aaron");
 array_push($stable, $horse);
 
 $horse = new Horse;

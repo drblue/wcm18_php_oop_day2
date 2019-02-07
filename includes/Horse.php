@@ -7,7 +7,7 @@ class Horse {
 	public $height;
 	public $weight;
 	public $sex;
-	public $owner;
+	public $owners = [];
 
 	public function getInfo() {
 		return "<h1>{$this->name}</h1>
@@ -17,18 +17,16 @@ class Horse {
 				<li>Height: {$this->height} cm</li>
 				<li>Weight: {$this->weight} kg</li>
 				<li>Sex: {$this->sex}</li>
-				<li>Owner: {$this->getOwner()}</li>
+				<li>Owner: {$this->getOwners()}</li>
 			</ul>";
 	}
 
-	public function getOwner() {
-		return $this->owner;
+	public function getOwners() {
+		return implode(", ", $this->owners);
 	}
 
 	public function setOwner($name) {
-		if (!$this->owner) {
-			$this->owner = $name;
-		}
+		array_push($this->owners, $name);
 	}
 
 }
