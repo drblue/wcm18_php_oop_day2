@@ -4,25 +4,22 @@ require("includes/Horse.php");
 
 $stable = [];
 
-$horse = new Horse;
-$horse->name = "Pelle";
+$horse = new Horse("Pelle", 170, 650);
 $horse->breed = "Ardenner";
 $horse->color = "Rosa";
-$horse->height = 170;
-$horse->weight = 600;
 $horse->sex = "Vallak";
 $horse->setOwner("Adam");
 $horse->setOwner("Aaron");
 array_push($stable, $horse);
 
-$horse = new Horse;
-$horse->name = "Kalle";
+$horse = new Horse("Kalle", 120, 400);
 $horse->breed = "C-ponny";
 $horse->color = "Turkos";
-$horse->height = 120;
-$horse->weight = 400;
 $horse->sex = "Hingst";
 $horse->setOwner("Bertil");
+array_push($stable, $horse);
+
+$horse = new Horse("Caesar", 60, 550);
 array_push($stable, $horse);
 
 /**
